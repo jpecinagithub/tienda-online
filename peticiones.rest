@@ -1,0 +1,236 @@
+@baseUrl = http://localhost:3001/api
+@tokenAdmin = 
+@tokenCliente = 
+
+#######################################
+# AUTENTICACIÓN
+#######################################
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Registro de usuario
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "nuevo@tienda.com",
+  "password": "12345678",
+  "nombre": "Usuario",
+  "apellido": "Nuevoefono": "",
+  "tel600000000",
+  "direccion": "Calle Nueva 1"
+}
+
+### Login como admin
+# @name loginAdmin
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@tienda.com",
+  "password": "12345678"
+}
+
+### Login como cliente
+# @name loginCliente
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "cliente@tienda.com",
+  "password": "12345678"
+}
+
+### Obtener perfil
+GET {{baseUrl}}/auth/profile
+Authorization: Bearer {{tokenCliente}}
+
+### Actualizar perfil
+PUT {{baseUrl}}/auth/profile
+Authorization: Bearer {{tokenCliente}}
+Content-Type: application/json
+
+{
+  "nombre": "Juan Actualizado",
+  "telefono": "600999999"
+}
+
+#######################################
+# PRODUCTOS (PÚBLICO)
+#######################################
+
+### Listar todos los productos
+GET {{baseUrl}}/products
+
+### Productos destacados
+GET {{baseUrl}}/products/featured
+
+### Filtrar por categoría
+GET {{baseUrl}}/products?categoria=Electrónica
+
+### Buscar productos
+GET {{baseUrl}}/products?search=Smart
+
+### Obtener producto por ID
+GET {{baseUrl}}/products/1
+
+#######################################
+# CATEGORÍAS (PÚBLICO)
+#######################################
+
+### Listar categorías
+GET {{baseUrl}}/categories
+
+### Obtener categoría por ID
+GET {{baseUrl}}/categories/1
+
+#######################################
+# PEDIDOS (AUTENTICADO)
+#######################################
+
+### Crear pedido
+POST {{baseUrl}}/orders
+Authorization: Bearer {{tokenCliente}}
+Content-Type: application/json
+
+{
+  "items": [
+    { "producto_id": 1, "cantidad": 1 },
+    { "producto_id": 2, "cantidad": 1 }
+  ],
+  "direccion_envio": "Calle Cliente 2, Barcelona",
+  "metodo_pago": "tarjeta"
+}
+
+### Mis pedidos
+GET {{baseUrl}}/orders/my
+Authorization: Bearer {{tokenCliente}}
+
+### Detalle de mi pedido
+GET {{baseUrl}}/orders/my/1
+Authorization: Bearer {{tokenCliente}}
+
+#######################################
+# ADMIN - GESTIÓN DE USUARIOS
+#######################################
+
+### Listar usuarios
+GET {{baseUrl}}/users
+Authorization: Bearer {{tokenAdmin}}
+
+### Obtener usuario por ID
+GET {{baseUrl}}/users/2
+Authorization: Bearer {{tokenAdmin}}
+
+### Crear usuario
+POST {{baseUrl}}/users
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "email": "empleado@tienda.com",
+  "password": "12345678",
+  "nombre": "Empleado",
+  "apellido": "Nuevo",
+  "rol": "cliente"
+}
+
+### Actualizar usuario
+PUT {{baseUrl}}/users/3
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "activo": false
+}
+
+### Eliminar usuario
+DELETE {{baseUrl}}/users/5
+Authorization: Bearer {{tokenAdmin}}
+
+#######################################
+# ADMIN - GESTIÓN DE PRODUCTOS
+#######################################
+
+### Crear producto
+POST {{baseUrl}}/products
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "nombre": "Nuevo Producto",
+  "descripcion": "Descripción del producto",
+  "precio": 99.99,
+  "stock": 50,
+  "categoria_id": 1,
+  "destacado": true
+}
+
+### Actualizar producto
+PUT {{baseUrl}}/products/1
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "stock": 45,
+  "precio": 749.99
+}
+
+### Eliminar producto
+DELETE {{baseUrl}}/products/20
+Authorization: Bearer {{tokenAdmin}}
+
+#######################################
+# ADMIN - GESTIÓN DE CATEGORÍAS
+#######################################
+
+### Crear categoría
+POST {{baseUrl}}/categories
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "nombre": "Juguetes",
+  "descripcion": "Juguetes para todas las edades"
+}
+
+### Actualizar categoría
+PUT {{baseUrl}}/categories/6
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "descripcion": "Juguetes actualizados"
+}
+
+#######################################
+# ADMIN - GESTIÓN DE PEDIDOS
+#######################################
+
+### Listar todos los pedidos
+GET {{baseUrl}}/orders/all
+Authorization: Bearer {{tokenAdmin}}
+
+### Filtrar pedidos por estado
+GET {{baseUrl}}/orders/all?estado_pago=aprobado&estado_envio=pendiente
+Authorization: Bearer {{tokenAdmin}}
+
+### Actualizar estado de pedido
+PUT {{baseUrl}}/orders/1/status
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "estado_pago": "aprobado",
+  "estado_envio": "procesando"
+}
+
+### Simular actualización de envío
+PUT {{baseUrl}}/orders/1/shipping
+Authorization: Bearer {{tokenAdmin}}
+Content-Type: application/json
+
+{
+  "estado_envio": "enviado"
+}

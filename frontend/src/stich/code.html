@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tienda Online | Define tu Estilo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318]">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-solid border-[#f0f1f5] px-6 py-3 lg:px-20">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+<h2 class="text-[#111318] text-xl font-extrabold leading-tight tracking-tight">Tienda Online</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#111318] text-sm font-bold hover:text-primary transition-colors" href="#">Novedades</a>
+<a class="text-[#111318] text-sm font-bold hover:text-primary transition-colors" href="#">Streetwear</a>
+<a class="text-[#111318] text-sm font-bold hover:text-primary transition-colors" href="#">Tech</a>
+<a class="text-[#111318] text-sm font-bold hover:text-primary transition-colors" href="#">Ofertas</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="hidden lg:flex items-center bg-[#f0f1f5] rounded-xl px-4 py-2 w-full max-w-xs">
+<span class="material-symbols-outlined text-[#606e8a] text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-[#606e8a]" placeholder="Busca tu estilo..." type="text"/>
+</label>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-xl bg-[#f0f1f5] hover:bg-primary/10 transition-colors text-[#111318]">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+</button>
+<button class="p-2.5 rounded-xl bg-[#f0f1f5] hover:bg-primary/10 transition-colors text-[#111318]">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 lg:px-20">
+<!-- Hero Section -->
+<section class="py-10">
+<div class="relative overflow-hidden rounded-xl bg-primary/5 min-h-[500px] flex items-center">
+<div class="grid grid-cols-1 lg:grid-cols-2 w-full items-center gap-10 p-8 lg:p-16">
+<div class="z-10 flex flex-col gap-8">
+<div class="inline-flex items-center bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">
+                            Nueva Colección 2024
+                        </div>
+<h1 class="text-[#111318] text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tighter">
+                            Define tu <span class="text-primary">Estilo</span>. Vive la Tendencia.
+                        </h1>
+<p class="text-lg text-[#606e8a] max-w-md leading-relaxed">
+                            La moda que pega fuerte. Únete a la crew y descubre lo más hot del momento en streetwear y tecnología.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+                                Comprar Ahora
+                            </button>
+<button class="bg-white border-2 border-[#f0f1f5] text-[#111318] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#f0f1f5] transition-colors">
+                                Ver Catálogo
+                            </button>
+</div>
+</div>
+<div class="relative h-[400px] lg:h-[600px] w-full">
+<img alt="Young stylish person in urban streetwear" class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl rotate-2" data-alt="Young stylish person in urban streetwear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIfGufJu_TF-_HKMo1JYDhFYAJghghqfC6r84bjfmXv77ptvjQGSqXsrA8cSuMPqgaCjuFqZEQRt9Yh6PdFbOM83_buxSGdYggyqJKxkqSIFUO-xfWsxdFDjYAOZD8QqQTQU02sP9rb3oIP2FkXZPgPfGPUzCfx5DLjwqEiFx46nkqMpZ9CcDz78CPxjB6FEAkvXOFi29XDw1nCsZtv0mZ1ohGSj3bHec9j7rKhP7eZwDaGeIw9HywqaX4b48kXoL_uYwHMpRBMZLl"/>
+<div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg hidden md:block rotate-[-2deg]">
+<div class="flex items-center gap-3">
+<div class="bg-green-100 text-green-600 p-2 rounded-lg">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-xs font-bold text-[#606e8a]">Ventas hoy</p>
+<p class="text-lg font-extrabold">+1,240</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Now -->
+<section class="py-12">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight">Lo más Hot del Momento</h2>
+<p class="text-[#606e8a] mt-2">Los favoritos de la comunidad esta semana.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                    Ver todos <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex overflow-x-auto gap-6 hide-scrollbar pb-4">
+<!-- Product Card 1 -->
+<div class="min-w-[280px] group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-[#f0f1f5]">
+<img alt="Nike Air Max Special Edition Sneakers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Nike Air Max Special Edition Sneakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjtq7V6yAlPKqK3w8m4sAV8pPDOAcNmin4-LbxSFVMAijB99WQlVWKrn49m52yD4DcrT5H95t2WeUaD-qLHtX1bTVZnjNtmZ9zWFwYeQjFkfKALTHUu4X6-dDG4fjnc6oEp958lclnnJ4DjfkaHrtN3C5YKEXPsPp3hl7YH0aEc5Oky9v8uRo-QqJ2vgkPxfXiJmZVAK0dAJGLllEKyBejqA-BzJbPBSBttzXKwK1thWmaIm82tIG94RO1wzuZH4WaD7z__hqKBw6B"/>
+<button class="absolute bottom-4 right-4 bg-white p-3 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-lg">Nike Air Max Special</h3>
+<p class="text-primary font-extrabold text-xl">$129.99</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[280px] group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-[#f0f1f5]">
+<img alt="Premium Noise Cancelling Headphones" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Premium Noise Cancelling Headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyEdHxAyZj8q4vBL8sDKRXc4JJYC_tymdid6tee_phHB3-yXFxrXHYil2fWPI1Bjfkvmrn59VRNBEtzXp5w6jwdRJ3Hmos7K4bM9xo3cp7fTGoEiXj-0hCBO6bYi30GRHeJ5OFKzkvxsWnm1YNcx1XVV-Hsnpfoyc8499wNcbnWO5E7dzBwtGQxHbWrx6kh9ktpU8SKFdD2z6O8sjNhVIyVeZ5MRnaAmq2agvRXGlWQNitIPKl-pB62YC-wItvqBGhL8rtBELkYmCc"/>
+<button class="absolute bottom-4 right-4 bg-white p-3 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-lg">Sony WH-1000XM5</h3>
+<p class="text-primary font-extrabold text-xl">$349.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[280px] group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-[#f0f1f5]">
+<img alt="Blue Streetwear Hoodie Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Blue Streetwear Hoodie Vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTJ6Gj_Usg42Z_EPX3Lz8-KTzRvgEk6tYT70JMyAHMpK9tg4zJwxF01bdbZsP5GO8Ft2-FK60kgf1TDRJeYIoIYRVYrtk9545czwFcT7BUpKDRiTmUxhCBq0QuATsnAUMhOC5hI0SBQ-PNrSIG0Ib7HgI2w0LXjjqKc5C8_O9jRd4vCb9UgJVziFit_TmJEGSaLN-R4HcmxQi5CutbkwrkFWN7jBdzG699ZzTARKslBscfIArznFpWLqxDrVKcOcMjICmzYvVnOEiu"/>
+<button class="absolute bottom-4 right-4 bg-white p-3 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-lg">Hoodie 'Vibe' Azul</h3>
+<p class="text-primary font-extrabold text-xl">$59.90</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="min-w-[280px] group flex flex-col gap-4">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-[#f0f1f5]">
+<img alt="Modern Smartwatch Tech" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern Smartwatch Tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0vLbCaFTVjMcpLKMuqck6j-m_EU9ITJKQir2R2m6BiZIkgyF6944MPA0rRBVWbofwhg7I_kZpdFEb0Fjm8fKTQx04Ok5tlMC5ZXS63ymCEXxyVtI4uKevknOij6egC4D9UaLwsYAx0_Cwfztsik-KknrBH8piTdQHEPX5Nnmqf3TLIZPdWQybhDvrbw_nHU4nBRllBBr3uPY7PUz_bIEtk4Y0bk81luvnOal360UUkOh8K26r4vAsHQ8Eg2S5O7fbEaplMW1lMDiq"/>
+<button class="absolute bottom-4 right-4 bg-white p-3 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-lg">Tech Watch Pro</h3>
+<p class="text-primary font-extrabold text-xl">$199.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Flash Sale -->
+<section class="py-12">
+<div class="bg-primary rounded-xl p-8 lg:p-12 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full blur-2xl -ml-24 -mb-24"></div>
+<div class="text-white z-10 text-center lg:text-left">
+<div class="inline-block bg-white text-primary px-3 py-1 rounded-lg text-sm font-black mb-4 animate-pulse">
+                        SÓLO POR 2 HORAS
+                    </div>
+<h2 class="text-4xl lg:text-5xl font-black leading-tight tracking-tight mb-4">
+                        OFERTAS RELÁMPAGO
+                    </h2>
+<p class="text-white/80 text-lg">Descuentos de hasta el 40% en artículos seleccionados. ¡Corre que vuelan!</p>
+</div>
+<div class="flex items-center gap-4 z-10">
+<div class="flex gap-2">
+<div class="bg-white/20 backdrop-blur-md rounded-xl p-4 w-20 text-center">
+<p class="text-white text-3xl font-black">01</p>
+<p class="text-white/60 text-xs font-bold">HORAS</p>
+</div>
+<div class="bg-white/20 backdrop-blur-md rounded-xl p-4 w-20 text-center">
+<p class="text-white text-3xl font-black">42</p>
+<p class="text-white/60 text-xs font-bold">MINS</p>
+</div>
+<div class="bg-white/20 backdrop-blur-md rounded-xl p-4 w-20 text-center">
+<p class="text-white text-3xl font-black">15</p>
+<p class="text-white/60 text-xs font-bold">SEGS</p>
+</div>
+</div>
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-extrabold text-lg hover:bg-background-light transition-colors whitespace-nowrap">
+                        Ver Rebajas
+                    </button>
+</div>
+</div>
+</section>
+<!-- Shop by Category -->
+<section class="py-12">
+<h2 class="text-3xl font-extrabold tracking-tight mb-8">Comprar por Categoría</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group relative h-80 overflow-hidden rounded-xl cursor-pointer">
+<img alt="Streetwear Category" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Streetwear fashion urban category" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlqeOhRbiJlr8CXkfRi73XWz91gTLfdxeIIAOj6ILQckRQQWt1QjU2TFerdxz1hSN4J0d3Ta14avjE0XgRpwNXMGPDbH5r8wBId1Yqil2_l447lEj9SIwG8W0RM5tKNoxh2uE7RjdWlCAWZeLsmQfX89TS20e2AHGGsen2L-hcUj2Qj9ByPIFee_8MKJN0mDDJ7FMmLHDGtg6CDNqCInYZ_mJFy_ZdSATlX699plrRbiuUk0zpkRIcmob_d5KBTFsXdItlhaJJX53U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-black italic uppercase">Streetwear</h3>
+<p class="text-white/70 font-bold">+500 Items</p>
+</div>
+</div>
+<div class="group relative h-80 overflow-hidden rounded-xl cursor-pointer">
+<img alt="Tech Category" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern tech gadgets and electronics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNOk6W5Q0jFtv024__m8qTfX7M_VOTxbfkYY8aQm9XJJNJJOivD8Nh7r7v38g5Yl9bJkkbPQ4-HJ0Y6O9eNnKIVhSLieAku74dFA5WEdi4Ix5Y4Yxin3SXxY4fWYJlRskEEZKIVcSZq62BGErzJppZmHPBXkiNKxd9XX5Pe5Rj6OdjXc5cXwNdHCdNkl5yWEuWt5mkVNQRrlsu5lWewqYmkjgRvzu74TNMdhw8HrZNqMwFuHvzF9XzJarsWOnaZs7hT4TppVEU63gQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-black italic uppercase">Tech &amp; Gadgets</h3>
+<p class="text-white/70 font-bold">+200 Items</p>
+</div>
+</div>
+<div class="group relative h-80 overflow-hidden rounded-xl cursor-pointer">
+<img alt="Lifestyle Category" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Lifestyle and personal care items" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEtfJN1uC8w_-bz_8IAN_FNgzOc5UV7IJOnd1B8UFmTzhpyHDdM1WJFQOMox7QOtc9mIlVoS2C_xS3hqhIZ-KhG2Hr4DAWAyp54zEwWuK6ZNWwYFYBtcjvgJ2RWomla258Iq3vYGmBLitmVdwTK4qg-0betOJ31GEp6Q3nlcyeFRI8Ik571nB9ZP18pTanEh8QGF__8D_OGmkkqrZKkPa_EemlbLzPF5AdVr35N9DSkQBzN5tFxNDWpPX0GEwfAn-EGEqZ-9wrMsgu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-black italic uppercase">Lifestyle</h3>
+<p class="text-white/70 font-bold">+350 Items</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Grid -->
+<section class="py-12">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-extrabold tracking-tight">Visto en #TiendaOnline</h2>
+<p class="text-[#606e8a] mt-2">Etiquétanos para aparecer aquí y formar parte de la crew.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<img alt="Instagram user 1" class="aspect-square w-full object-cover rounded-xl hover:opacity-90 transition-opacity" data-alt="Style influencer wearing street fashion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEYt5e7TrG9Oyg1gUyjoql68tdM6yQTCR4ebm5HHBuQH4IiWEJQzYmND7Fuimgf-i7Ml9Sm_9w-kRzk87vWpLfvakBBUW72CW53AvDWtm6feWKGacbuowKo126EGmxLEBns-xkB5wwqIUzLSkXrzuFvfZ1HUlScTmccMMlVQu-qEKt1kCoCVqnIqd6teuFiINSvm2zaYyK2PNZ73nrfJjVXS8TxtpfVwLJd8ssYF4tD3ksQlQmjv028pxcdUBFhYgqXq1_o2HKC6ne"/>
+<img alt="Instagram user 2" class="aspect-square w-full object-cover rounded-xl hover:opacity-90 transition-opacity" data-alt="Style influencer portrait in urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvYdwd7etGKZRtliennVfK59KNbpYpoREoyJAf5OqRTr0bkw5SzDAwP77KsFT6Mrk_u-emfD5SfYDWNtwtGtvISbAnVe1vMlXa-oe6UqMe9wyXmWUfAuLc9uqfGI27BRYSnXFMFWkzhHTpl4_Q1wctWoy_2UGx6JUzVhj12tCaqW0v-Vt2YgTsK_-7G4gCd0bnUkqefXe74e4tko72KmRskgT3MDSnIkY1Ziq1HYhiDri3XLFWZHYUZYVySg0NEEXOqtvCND-dRP8i"/>
+<img alt="Instagram user 3" class="aspect-square w-full object-cover rounded-xl hover:opacity-90 transition-opacity" data-alt="Streetwear outfit details close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgKlg5eogDfHHJiXW4To-vMiJsDsS03OhgfNCUWP5qqZLox2nowhPiCn2uqAgfKOQ6jAgycLLBDL2uRsKLKfGgzwekXBUJBlirhAhBUK4SgB-RLH9ppUBWRC02bZEquqHbKRs38DxJlxBroCIC-aUT8dc2yoAGKcnhMdNKpyLDV44YhZ4w_bs4WlkSIFT0FAlEmHnnwdMF2udHYRewknE3G6LqVvo92SGuh54PsZ3mKZi5NgpaWg3DlnBta7ppaPGZNcgaZjkElrRy"/>
+<img alt="Instagram user 4" class="aspect-square w-full object-cover rounded-xl hover:opacity-90 transition-opacity" data-alt="Trendy fashion photoshoot aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeHZ-jowPJ3CY7kEcUW6pbp3cCWPm_xpwrPOF5TaSUaW98v5E1o5p5ZBu1MvVVEPFjP8jISa27tpBD_sguIItuzfoJGBlKA7lU8ZBA0Atb3j28NoaCzEFvOGjSmUduWYWBw8NO2fjzU28LahqnRpmDbe_XvHR-ODIHOYRkzknnWY4JG6r-CmQrGoSEy24GiUVKuzJQscx-i3_O8tcSTnTK47hJNF1P0rAWxiOiIqCfYBfC4REtYdfKQWaMwqw4jxb0VJsVJNfkZcmj"/>
+<img alt="Instagram user 5" class="aspect-square w-full object-cover rounded-xl hover:opacity-90 transition-opacity" data-alt="Urban clothing style on the street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC68SlJfGFP7KH26m3l_GEJRTFskTafZU110w_urjFGhjdGjQp7aqS8GhC-mBnOwdDyYVZK2Zx_1MCeEtj5XUWKTiVI0IYYuMHS8QeakF9zAlf52Gto97kejBdvV4MbX1vXF4c9NSr9CoNSbEmEXMZH6RblA4qbwNxhsIg4sSPnjFcZpt7R8i7dtBj2XBWqgv3dJfmdU6mfGBtnOA2DsZ-6rSRx0R-8VOUj26FK3o-mmIE-6sJX8VJvO2jhi2qgoMK-qRFaMMdGNja"/>
+<img alt="Instagram user 6" class="aspect-square w-full object-cover rounded-xl hover:opacity-90 transition-opacity" data-alt="Fashion bag and accessory showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB3F1UBeSimYCNX4RqdQ2MJs6yNUNtNyo4wziVZWJJ-8VOPmA3dJjKRhpFG0GcB4JH-Mrnxvx3CcepTpOKuHpJ1CuvqKIfksdsd-k3Rz70KgK7MPVZHTpaAMTokqa6N984cGqa8gHxP_h2YsrDF3U9hwYtkk3gvTQUbc7x0sETrHm52JZSuchot1wS-lYZu3M0GYFhFQcJX_f4GSeULRicqDvMU0T5W7Ew09ainxZUeFqBaJzyskashbQv6pbTFO8SwAES24dgmPl6"/>
+</div>
+</section>
+<!-- Newsletter / CTA Section -->
+<section class="py-12 mb-20">
+<div class="bg-background-dark text-white rounded-xl p-8 lg:p-16 text-center flex flex-col items-center gap-8 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="z-10">
+<h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Únete a la Crew</h2>
+<p class="text-white/60 text-lg max-w-xl mx-auto">
+                        Recibe un <span class="text-primary font-bold">15% de descuento</span> en tu primera compra y entérate antes que nadie de los drops exclusivos.
+                    </p>
+</div>
+<form class="z-10 flex flex-col md:flex-row gap-4 w-full max-w-lg" onsubmit="event.preventDefault();">
+<input class="flex-1 bg-white/10 border-white/20 rounded-xl px-6 py-4 text-white focus:ring-primary focus:border-primary" placeholder="tu@email.com" type="email"/>
+<button class="bg-primary text-white font-black px-8 py-4 rounded-xl hover:scale-105 transition-transform">
+                        REGISTRARSE
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-solid border-[#f0f1f5] py-16 px-6 lg:px-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">bolt</span>
+</div>
+<h2 class="text-[#111318] text-lg font-extrabold tracking-tight">Tienda Online</h2>
+</div>
+<p class="text-[#606e8a] text-sm leading-relaxed">
+                    La plataforma definitiva para la generación que no se conforma. Moda, tecnología y cultura urbana en un solo lugar.
+                </p>
+<div class="flex gap-4">
+<a class="text-[#606e8a] hover:text-primary" href="#"><span class="material-symbols-outlined">brand_family</span></a>
+<a class="text-[#606e8a] hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-[#606e8a] hover:text-primary" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6">Comprar</h4>
+<ul class="flex flex-col gap-4 text-sm text-[#606e8a]">
+<li><a class="hover:text-primary" href="#">Nuevos Lanzamientos</a></li>
+<li><a class="hover:text-primary" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary" href="#">Ediciones Limitadas</a></li>
+<li><a class="hover:text-primary" href="#">Promociones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Ayuda</h4>
+<ul class="flex flex-col gap-4 text-sm text-[#606e8a]">
+<li><a class="hover:text-primary" href="#">Estado del Pedido</a></li>
+<li><a class="hover:text-primary" href="#">Envíos y Entregas</a></li>
+<li><a class="hover:text-primary" href="#">Devoluciones</a></li>
+<li><a class="hover:text-primary" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Métodos de Pago</h4>
+<div class="grid grid-cols-3 gap-2">
+<div class="h-8 bg-[#f0f1f5] rounded"></div>
+<div class="h-8 bg-[#f0f1f5] rounded"></div>
+<div class="h-8 bg-[#f0f1f5] rounded"></div>
+<div class="h-8 bg-[#f0f1f5] rounded"></div>
+<div class="h-8 bg-[#f0f1f5] rounded"></div>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-[#f0f1f5] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#606e8a]">
+<p>© 2024 Tienda Online. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">Privacidad</a>
+<a class="hover:underline" href="#">Términos</a>
+<a class="hover:underline" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+</body></html>
